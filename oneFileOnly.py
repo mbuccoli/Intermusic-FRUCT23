@@ -1,3 +1,5 @@
+import re
+
 '''
 From the Fruct23 guidelines:
 
@@ -28,17 +30,39 @@ Please note that ALL THE FIGURES MUST BE IN BN
 
 '''
 
+def replace(content, matches):
+    for match in matches:
+
+        fn=match.split('{')[1].split('}')[0]+'.tex'
+        content_fn=in_out(IN_FILE=fn)
+        content=content.replace(match, content_fn)
+    return content
+    
+def in_out(IN_FILE=None, OUT_FILE=None, content=None):
+    if IN_FILE is not None:
+        with open(IN_FILE,'r') as fp:
+            return fp.read()
+    if OUT_FILE is not None and content is not None:        
+        with open(OUT_FILE,'w') as fp:
+            fp.write(content)
+    
 if __name__=='__main__':
     IN_FILE='main.tex'
     OUT_FILE='OneTexFile.tex'
-    with open(IN_FILE,'r') as fp:
-        content=fp.read()
+    content=in_out(IN_FILE=IN_FILE)
     '''
     the real algorith, which is basically a while with a replace:
-    while "\include " in content:
+    
         replace(content)
     '''
-    with open(OUT_FILE,'w') as fp:
-        fp.write(content)
+    matches=re.findall(r"\\input{\w+}",content)
+    
+    while len(matches)>0:
+        print(matches)
+        content=replace(content, matches)
+        matches=re.findall(r"\\input{\w+}",content)
+        
+    in_out(OUT_FILE=OUT_FILE,content=content)
+        
     
 
