@@ -4,3 +4,7 @@ img/non-eps/
 *.gz
 
 main\.aux
+
+main\.pdf
+
+*.aux
