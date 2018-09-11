@@ -1,42 +1,62 @@
 
 \section{Introduction}\label{sec:introduction}
-With the rapid evolution of technology and the increase speed of network connections, numerous applications have become possible.  
 
-Computer-aided musical collaborations between geogra\-phically-displaced musicians have been subject of extensive investigation from a variety of perspectives, since the late '90s. Early categorizations of computer systems for musical interaction have been proposed in~\cite{barbosa2003displaced}, based on the temporal (synchronous vs. asynchronous) and spatial (co-located vs. remote) dimensions of the %musical
-performance. 
-%Typically, the research and development focused 
-The research and development has focused 
-on the technical and perceptual issues (i.e., network delay and audio quality) affecting the on-line, simultaneous performance between musicians located and playing in remote rooms~\cite{rottondi2016overview}. 
+The rapid evolution of technology and the increase speed of network connections have allowed to dramatically reduce the distances and see new scenarios of interaction among geogra\-phically-displaced people. Since the late '90s, a community composed of musicians, technicians and  scientists started to investigate how to use technology to enable music performances leading to the definition of Networked Music Performances (NMPs), which \textit{occurs when a group of musicians, located at different physical locations, interact over a network to perform as they would if located in the same room} \cite{Lazzaro2001}.
 
-A substantial body of work has been produced in that area that has been crystallized under the acronym of NMP, namely Networked Music Performance. Gabrielli and colleague provide a valuable picture of the state of the art of NMP research and projects~\cite[Chapter~2, 3]{gabrielli2016networked}.
+Music Networked Performance is an interesting outcome of technology, and has receive attention under different factors.
 
-From a different angle, a renovated interest in remote collaborative environments has been growing in the area of audio-video (AV) streaming and conferencing systems for educational purposes~\cite{alpiste2013telepresence}. NMP technologies and tools are increasingly being available on the market, and proposed as viable standards in blended and distance learning~\cite{IorwerthNMP2015}. 
+NMP also has pedagogical applications, which however may involve other factors, such as the quality of sound, the sound environment, the spatial acoustics information. 
 
-The EU funded project InterMUSIC\footnote{\url{http://intermusicproject.eu/}. The Consortium is composed by the Conservatory of Music ``G. Verdi'' of Milano (Coordinator), the Image and Sound Processing Group of the Polytechnic University of Milan, the RDAM Royal Danish Academy of Music of Copenhagen, the LMTA Lithuanian Academy of Music and Theatre of Vilnius, the AEC Association Europ{\'e}enne des Conservatoires, Acad{\'e}mies de Musique et Musikhochschulen.} (Interactive Environment for Music Learning and Practicing, 2017 - 2020) aims to bridge the approaches established in NMP research with the opportunities of distance learning and education. 
+InterMUSIC: what it is, what it aims, how it is involved with NMP.
+Goal of the project: work with the current technology to improve NMP sw and implement what needed for musicians, both with master-student lessons and to rehearse.
 
-A project-based and practice-led approach to research %~\cite{frankel2010complex} 
-is aimed at distilling, by the end of the project, an effective and operational environment, and especially a systematized knowledge in the form of best practices and guidelines for the implementation of remote environments for music interaction and education. This involves to author three online pilot courses in music theory and composition, chamber music practice, and vocal training, by means of the implementation of Massive Open Online Courses (MOOCs). With MOOCs, the interaction between teacher and students is usually one-to-many and asynchronous. On the other side, distance learning of the music practice can be delivered through one-to-one synchronous interaction between the teacher and the student. 
-\begin{figure*}[!t]
-	\centerline{
-		\includegraphics[clip,trim={4.6cm 8cm 5cm 8cm},width=\textwidth]{figures/instrumentalists.pdf}}
-	%    \vspace{-.5em}
-	\caption{Instrumentalist positioning in room 1, with frontal view of the co-performer displaced in room 2.} 
-	\label{fig:instrumentalists}
-	%    \vspace{-1em}
-\end{figure*}
+In this paper we describe the situation of NMP and we discuss the directions of investigation. We describe a framework of a perceptual test we intend to repeat several times, to investigate different factors. We also briefly describe a few preliminary tests already done and how their outcomes, especially comments from musicians, will guide our work.
 
-One of the most popular tool for NMP is designed to provide low-latency interaction by means of dedicated connections and high-performing hardware \cite{drioli2013networked}. In the common scenario, however, students do not have access to such networks and need to connect with the teacher by means of general purpose connections and hardware, which introduce processing and transmission latency.  
 
-With regard to NMP, the goal of the project is to investigate the user experience in order to optimize and improve the tools currently available. In this paper, we introduce a study, still in progress, aimed at understanding how temporal factors (i.e., network latency) affect the sense of presence, and the quality of the performance of chamber music duos involved in remote collaboration, i.e music making. 
 
-We ask duos to perform a short exercise, under diverse conditions of network delay. 
-The exercise is specifically conceived around musical structures which are functional to pinpointing a set of problems relative to time management, communication mechanisms and mutual understanding between remote performers. A qualitative assessment through questionnaires on the sense of presence and the perceived quality of the performance~\cite{schubert2001experience} is combined with quality metrics of the objective performance~\cite{rottondi2015feature}.
-A follow-up study will be devoted instead to the investigation of spatial representations, auditory and visual.
 
-The premise is that effective music-making and communication rely on the availability of auditory and visual cues (i.e., sonic gestures)~\cite{godoy2010musical}, which are inevitably constrained in NMP, and in telepresence environments in general. 
-We turn the traditional engineering approach to NMP research upside down, and seek for design strategies to compensate, and facilitate a plausible music experience in the mediated environment. 
 
-In this respect, we are investigating how simulated network delay, and diverse modes of audio-visual spatial representation, separately, affect the subjective experience of being present and together in the shared reality environment. 
-Sensory breadth and depth, degree of control and anticipation of events, together with the overall interactivity of the environment, represent crucial elements in both presence and performance, being the first a prerequisite for the second~\cite{nash2000review}.
 
-%The paper is organized as follows: in Section~\ref{sec:relatedwork} we provide the background context on top of which we are building our study; in Section~\ref{sec:presence} we elaborate on the concept of presence in the embodied cognition framework; Section~\ref{sec:experiment} introduces the pilot experiment, and the methodology; we discuss the preliminary observations collected, in Section~\ref{sec:discussion}.
+% \cite{barbosa2003displaced}. 
+
+
+%among musicians from different locations, 
+%
+%Computer-aided musical collaborations between geogra\-phically-displaced musicians have been subject of extensive investigation from a variety of perspectives, since the late '90s. Early categorizations of computer systems for musical interaction have been proposed in~, based on the temporal (synchronous vs. asynchronous) and spatial (co-located vs. remote) dimensions of the %musical
+%performance. 
+%%Typically, the research and development focused 
+%The research and development has focused 
+%on the technical and perceptual issues (i.e., network delay and audio quality) affecting the on-line, simultaneous performance between musicians located and playing in remote rooms~\cite{rottondi2016overview}. 
+%
+%A substantial body of work has been produced in that area that has been crystallized under the acronym of NMP, namely Networked Music Performance. Gabrielli and colleague provide a valuable picture of the state of the art of NMP research and projects~\cite[Chapter~2, 3]{gabrielli2016networked}.
+%
+%From a different angle, a renovated interest in remote collaborative environments has been growing in the area of audio-video (AV) streaming and conferencing systems for educational purposes~\cite{alpiste2013telepresence}. NMP technologies and tools are increasingly being available on the market, and proposed as viable standards in blended and distance learning~\cite{IorwerthNMP2015}. 
+%
+%The EU funded project InterMUSIC\footnote{\url{http://intermusicproject.eu/}. The Consortium is composed by the Conservatory of Music ``G. Verdi'' of Milano (Coordinator), the Image and Sound Processing Group of the Polytechnic University of Milan, the RDAM Royal Danish Academy of Music of Copenhagen, the LMTA Lithuanian Academy of Music and Theatre of Vilnius, the AEC Association Europ{\'e}enne des Conservatoires, Acad{\'e}mies de Musique et Musikhochschulen.} (Interactive Environment for Music Learning and Practicing, 2017 - 2020) aims to bridge the approaches established in NMP research with the opportunities of distance learning and education. 
+%
+%A project-based and practice-led approach to research %~\cite{frankel2010complex} 
+%is aimed at distilling, by the end of the project, an effective and operational environment, and especially a systematized knowledge in the form of best practices and guidelines for the implementation of remote environments for music interaction and education. This involves to author three online pilot courses in music theory and composition, chamber music practice, and vocal training, by means of the implementation of Massive Open Online Courses (MOOCs). With MOOCs, the interaction between teacher and students is usually one-to-many and asynchronous. On the other side, distance learning of the music practice can be delivered through one-to-one synchronous interaction between the teacher and the student. 
+%\begin{figure*}[!t]
+%	\centerline{
+%		\includegraphics[clip,trim={4.6cm 8cm 5cm 8cm},width=\textwidth]{figures/instrumentalists.pdf}}
+%	%    \vspace{-.5em}
+%	\caption{Instrumentalist positioning in room 1, with frontal view of the co-performer displaced in room 2.} 
+%	\label{fig:instrumentalists}
+%	%    \vspace{-1em}
+%\end{figure*}
+%
+%One of the most popular tool for NMP is designed to provide low-latency interaction by means of dedicated connections and high-performing hardware \cite{drioli2013networked}. In the common scenario, however, students do not have access to such networks and need to connect with the teacher by means of general purpose connections and hardware, which introduce processing and transmission latency.  
+%
+%With regard to NMP, the goal of the project is to investigate the user experience in order to optimize and improve the tools currently available. In this paper, we introduce a study, still in progress, aimed at understanding how temporal factors (i.e., network latency) affect the sense of presence, and the quality of the performance of chamber music duos involved in remote collaboration, i.e music making. 
+%
+%We ask duos to perform a short exercise, under diverse conditions of network delay. 
+%The exercise is specifically conceived around musical structures which are functional to pinpointing a set of problems relative to time management, communication mechanisms and mutual understanding between remote performers. A qualitative assessment through questionnaires on the sense of presence and the perceived quality of the performance~\cite{schubert2001experience} is combined with quality metrics of the objective performance~\cite{rottondi2015feature}.
+%A follow-up study will be devoted instead to the investigation of spatial representations, auditory and visual.
+%
+%The premise is that effective music-making and communication rely on the availability of auditory and visual cues (i.e., sonic gestures)~\cite{godoy2010musical}, which are inevitably constrained in NMP, and in telepresence environments in general. 
+%We turn the traditional engineering approach to NMP research upside down, and seek for design strategies to compensate, and facilitate a plausible music experience in the mediated environment. 
+%
+%In this respect, we are investigating how simulated network delay, and diverse modes of audio-visual spatial representation, separately, affect the subjective experience of being present and together in the shared reality environment. 
+%Sensory breadth and depth, degree of control and anticipation of events, together with the overall interactivity of the environment, represent crucial elements in both presence and performance, being the first a prerequisite for the second~\cite{nash2000review}.
+%
+%%The paper is organized as follows: in Section~\ref{sec:relatedwork} we provide the background context on top of which we are building our study; in Section~\ref{sec:presence} we elaborate on the concept of presence in the embodied cognition framework; Section~\ref{sec:experiment} introduces the pilot experiment, and the methodology; we discuss the preliminary observations collected, in Section~\ref{sec:discussion}.

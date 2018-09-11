@@ -8,3 +8,7 @@ main\.aux
 main\.pdf
 
 *.aux
+
+*.ps
+
+*.dvi
