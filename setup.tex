@@ -1,11 +1,76 @@
 \section{Preliminary experiments}\label{sec:setup}
-\subsection{A first experiment in presence}
-\subsection{A second experiment in remote}
-Descrizione questionario (soggettivo) perché le metriche non bastano
+In this Section, we describe two preliminary experiments we conducted in Spring 2018 following the framework presented in the previous section. The first experiments is a rehearsal between two musicians in the same room, where we insert visual occlusions to test their ability to interact in adverse conditions. The second experiments is a set of rehearsals between five couples of musicians from two separate rooms, connected via a network emulator to test the sense of presence and quality of performance at different latency conditions. The results of the two experiments are discussed in the next section.
+
+
+\subsection{Co-presence performance with visual occlusion}
+We invited a string duo to make a pilot test of the environment, the perceptual questionnaire and the musical pieces that we intended to use for the second experiment. We also included a test on adverse conditions of the medium (visual occlusion) to qualitatively assess the importance of video feedback in NMPs.
+
+We show a summary of the test conditions in table \ref{tab:exp1}. The two subjects are a violin and a cello player and are brothers, hence they have a long-time experience playing together and use a wide set of visual and audio cues to interact. For the musical parts, we create a composition that require mutual interaction and understanding. They include attacks, alternate scales, changes of tempo, unison playing, sustained loop. The parts are described in detail in \cite{CIM2018} and publicly available\footnote{https://tinyurl.com/intermusicCIM2018}.
+
+The performers were asked to play in two conditions of the medium: with no visual occlusion, and with partial visual occlusion, by inserting a tulle panel between the two instrumentalists, thus providing a blurring effect on their figures (as shown in Figure \ref{fig:veli}). The aim was to observe their behavior, adaptation strategies, and emerging non-verbal communication (bodily and musical gestures).
+
+The acquisition of the experiment was based on a subjective questionnaire on their sense of presence and free comments on the experience. 
+
+
+
+\begin{table}
+\centering
+\label{tab:exp1}
+\caption{Details of the experiment in co-presence}
+\begin{tabular}{p{1.5cm}p{6cm}}
+\hline
+\textbf{Entity} & \textbf{Properties} \\
+\hline
+\textbf{Performance} & Co-presence performance. \newline Parts arranged from Bartok pieces as described in [cit]. \\
+\textbf{Subjects} & Two brothers, violin and cello players. \newline Violin player: male, AGE?, musical experience?; 	\newline Cello player: make, AGE?, musical experience?\\
+\textbf{Environment} & Recording and mastering studio in the Conservatory of Milan; acoustically equipped with bass traps. \newline Musicians sit side by side, with peripherical vision.\\
+\textbf{Medium} & Air propagation. \newline Visual occlusion applied by means of a a screen with progressive layers of canvas applied to decrease transparence and visibility. \\
+\textbf{Acquisition} & Interview to the participants and free comments.\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=\columnwidth]{img/veli.eps}
+	\caption{The two musicians in experiment 1, with partial occlusion and blurred effect.}
+	\label{fig:veli}
+\end{figure}
+
+
+\subsection{Sense of presence in NMPs}
+The pilot experiment took place at the Conservatory of Music ``G. Verdi'' of Milano, in two dedicated rooms, e-quipped with direct network connection and all the necessary infrastructures.
+
+Objective of the study is to understand the effect of network delay to the sense of presence and the quality of the performance in chamber music duos practice. 
+
+How does the experience of network delay and interruption affect the involvement and realness, the predictability, the interface awareness and quality, and the overall quality of the musical performance? The same question applies separately to AV spatial representations in remote interaction and will be investigated in a forthcoming study. The outcomes are expected to provide relevant design implications in the staging of classrooms dedicated to remote music practice and teaching.
+
+In Section \ref{subsec:apparatus} we describe the setup of the experiment, and in Section \ref{subsec:task} the participants and the stimuli for the experiment. Performances' quality and sense of presence are assessed through subjective questionnaire, reported in Section~\ref{subsec:questionnaire}, and objective metrics, explained in Section~\ref{subsec:objmetrics}. The scores of the stimuli and the presence questionnaire are publicly available\footnote. A further research goal in the long term is to provide evidence of links between presence and performance in remote music interaction.
 
 
 
 
+
+
+
+
+\begin{table}
+	\centering
+	\label{tab:exp2}
+	\caption{Details of the NMP experiment. For a more in-depth description, we refer the reader to \cite{CIM2018} }
+	\begin{tabular}{p{1.5cm}p{6cm}}
+		\hline
+		\textbf{Entity} & \textbf{Properties} \\
+		\hline
+		\textbf{Performance} & Five NMP performances. \newline  Parts arranged from Bartok pieces. \\
+		\textbf{Subjects} & Five couples of musicians with different combinations of instruments. \\
+		\textbf{Environment} & Two rooms: two mastering studios in the Conservatory of Milan; acoustically equipped with bass traps. Musicians sit in front of a screen and a webcam and monophonic audio input/output .\\
+		\textbf{Medium} & Software LOLA with video and audio transmission. Network emulator with different latency condition and fixed jitter. \\
+		\textbf{Acquisition} & Audio recording of the performance from one room, audio/video recording using LOLA.\\
+		\hline
+	\end{tabular}
+\end{table}
 
 
 \begin{figure*}[t]
