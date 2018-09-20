@@ -1,44 +1,47 @@
 \section{Results and discussion}\label{sec:discussion}
 Though limited in the amount of involved people and performances, the experiments described in the previous section were helpful to start the discussion about the pedagogical applications of NMPs with musicians, and to collect useful comments and suggestions that will guide our investigation. 
 
-\subsection{Objective, subjective and biological metrics}
+\subsection{Objective, subjective and biological metrics}\label{subsec:metrics}
 In the two experiments, we investigate the sense of presence and quality of performance of the couple of subjects in case of visual occlusion (co-presence experiment) and different network latency conditions (networked performance). The acquisition and evaluation was performed using subjective and objective metrics \cite{CIM2018}. 
 
 With regard to the former, we used a post-experiment 27-item questionnaire divided in five main topics, such as \textit{Predictability and Interaction}, or \textit{Quality of the Music Performance}. After each phase of the networked experiments, we asked a subset of five questions to evaluate the impact of different latency conditions in the questionnaire.
 
-With regard to the latter, we acquired the audio recordings of the networked performance, manually tracked the beat, extracted a BPM trend and computed a degree of acceleration/deceleration from it. Other metrics used in NMP literature include the pacing, the regularity or the asymmetry of the performance \cite{RottondiOverview}.
+With regard to the latter, we acquired the audio recordings of the networked performance, manually tracked the beat, extracted a BPM trend and computed a degree of acceleration/deceleration $K$  (\textit{tempo slope}) from it. Other metrics used in NMP literature include the pacing, the regularity or the imprecision of the performance \cite{RottondiOverview}.
 
-
-
-an objective metrics computed from the audio acquisition related to the degree of acceleration or deceleration of the performance . The latter is one of the metrics
- 
 
 \begin{figure}[t]
 	\centering
-	\begin{subfigure}[t]{.48\columnwidth}
+	\begin{subfigure}[t]{.49\columnwidth}
 		\centering        
 		\includegraphics[trim={0cm 0cm 1cm 0cm},clip,width=\textwidth]{img/compelling}
-		\caption{Influence of the visual feedback}
+		\caption{Correlation between subjective answers to the question \textit{the sense of playing in the remote environment was compelling} in the x-axis and objective metrics values}
 		\label{subfig:compelling}
 	\end{subfigure}
-	\begin{subfigure}[t]{.48\columnwidth}
+	\quad
+	\begin{subfigure}[t]{.43\columnwidth}
 		\centering        
-		\includegraphics[trim={1.5cm 0cm 0cm 0cm},clip,width=\textwidth]{img/involvement}
-		\caption{Influence of the auditory feedback}
+		\includegraphics[trim={3cm 0cm 0cm 0cm},clip,width=\textwidth]{img/involvement}
+		\caption{Correlation between subjective answers to the question \textit{the delay affected the sense of involvement} in the x-axis and objective metrics values}
 		\label{subfig:involvement}
 	\end{subfigure}
 	\quad 
-	\caption{Histogram of the answers on the influence of visual and auditory feedback after the NMP experiment.}\label{fig:ca}
+	\caption{Correlation between subjective answers in the x-axis and tempo slope $K$ in the y-axis.}\label{fig:ci}
 	%	\vspace{-1em}
 \end{figure}  
 
+It is interesting to observe the comparison between the subjectively-perceived quality of the performance and the  objective metrics computed from the corresponding audio recording. In Figure \ref{fig:ci} we show the comparison with the answers to two quality-related questions, i.e., \textit{the sense of playing in the remote environment was compelling} (Fig. \ref{subfig:compelling}) and \textit{the delay affected the sense of involvement} (Fig. \ref{subfig:involvement}).
+
+Due to the few samples we obtained, it is not possible to draw statistically-meaningful conclusions. The preliminary observation, however, show an interesting trend that we would like to investigate further. The musicians seem to be more compelled with the remote environment when the levels of $K$ were lower, i.e., when the tendency to slow down is more accentuated. Analogously, their sense of involvement in the performance show little correlation with the tempo trend. 
+
+If the objective metrics $K$ does not correlate with the subjective satisfaction of subjects, we need to understand which quality metrics we aim at maximizing for the success of our platform. Two musicians, indeed, can easily keep the tempo by making one subjects following the lead of the other, using a master-slave approach to cope with latency \cite{Carot07networkmusic}. This would be however not helpful and even jeopardize the development of musical skills in a pedagogical scenario. A first investigation in the project will be devoted to find a metrics that is coherent with the pedagogical purposes of NMPs.  
+
+We aim to to extract such a metrics using content-based techniques, in order to provide a useful feedback for students and can guide our research for a more effective platform for NMP. We may estimate two metrics from the level of comfortability of the students during a lesson or a rehearsal. For this reason, we intend to acquire biometric signals to estimate the level of distress during the performance and whether the NMPs contribute to increase such level. 
+
+
 
 \subsection{Auditory and visual feedback}
-From the first experiment, we could observe different strategies of musical coordination and interpretation, based on breathing signaling and communicative gestures to keep synchronization, especially for attacks and the duration of sustained notes. In this case, the no sight condition deeply affected the expressiveness of the performance. In full visual occlusion, the performers relied mostly on acoustic cues to keep the tempo, with the apparent effect of an acceleration during the performance. 
+From the co-presence experiment, we could observe different strategies of musical coordination and interpretation, based on breathing signaling and communicative gestures to keep synchronization, especially for attacks and the duration of sustained notes. In this case, the no-sight condition deeply affected the expressiveness of the performance. In full visual occlusion, the performers relied mostly on acoustic cues to keep the tempo, with the apparent effect of an acceleration during the performance. 
 
-This aspect is also investigated in the remote performance by asking in the perceptual questionnaire how much the visual and auditory display quality interfered or distracted them from performing. In Figure \ref{fig:va} we display a histogram of the answers in a 7-point likert scale. While the influence of the visual feedback is limited (Fig \ref{subfig:visual}), the auditory feedback is predominant for the performance.
-  
-  
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}[t]{.48\columnwidth}
@@ -48,21 +51,59 @@ This aspect is also investigated in the remote performance by asking in the perc
 		\label{subfig:visual}
 	\end{subfigure}
 	\begin{subfigure}[t]{.48\columnwidth}
-	\centering        
-	\includegraphics[trim={1.5cm 0cm 0cm 0cm},clip,width=\textwidth]{img/Audio}
-	\caption{Influence of the auditory feedback}
-	\label{subfig:audio}
-\end{subfigure}
+		\centering        
+		\includegraphics[trim={1.5cm 0cm 0cm 0cm},clip,width=\textwidth]{img/Audio}
+		\caption{Influence of the auditory feedback}
+		\label{subfig:audio}
+	\end{subfigure}
 	\quad 
 	\caption{Histogram of the answers on the influence of visual and auditory feedback after the NMP experiment.}\label{fig:va}
-%	\vspace{-1em}
+	%	\vspace{-1em}
 \end{figure}  
-  
-\subsection{Peripherical visual feedback}
-The partial occlusion condition somewhat mimics a possible strategy for visual information reduction in remote performance (blob). 
+
+This aspect is also investigated in the remote performance by asking in the perceptual questionnaire how much the visual and auditory display quality interfered or distracted them from performing. In Figure \ref{fig:va} we display a histogram of the answers in a 7-point likert scale. While the influence of the visual feedback is limited (Fig \ref{subfig:visual}), the auditory feedback is predominant for the performance.
+
+During the time of free comments, the subjects explained that the video feedback was less relevant due to the low degree of synchronicity introduced by the latency, which led them to look less for a visual interaction with their partner. In order to translate these comments into requirements for a NMP tool, we need to assess the importance of visual and auditory interaction in performances and rehearsal.
+
+A level of auditory interaction can be estimated using a measure of asymmetry between the audio recordings of the two subjects, as computed in \cite{Chafe3}. With regard to visual interaction, we intend to acquire a video recording of the performance using cameras that capture when the subjects are watching at their partners on the screen. By annotating both intentional and saccadic movements, we aim at estimating whether a higher level of interaction between subjects corresponds to higher satisfaction in the performance and, possibly, how to design the visual and auditory feedback in our platform.
+ 
+\subsection{Peripheral visual feedback}
+In the previous subsection, we discussed the importance of visual feedback in co-presence and networked performances. During the co-presence experiment, we observed how performers where comfortable with blurred visual of their partners. They explained us that most of the visual information for synchronization is contained in the simple motion, rather than in the whole figure.
+
+Similarly, some participants of the networked performances commented that one of the reason of the influence of the visual feedback was the lower importance of direct visual interaction. In their typical disposition during rehearsal and performance they are placed in front of an audience rather than in front of each other and, therefore, mostly rely on peripheral vision for interacting.
+
+While in the networked experiment the arrangement of webcam and monitors was made to improve eye contact, as in \cite{duffy2017new}, we intend to test the role of peripheral vision by trying different arrangement during the NMPs. This involves to test different virtual environments and find the most promising for pedagogical purposes.
+
+The most suitable arrangements may however involve to use multiple visual feedbacks, e.g., one frontal for eye contact and one for catching peripheral motion, leading to a virtual environments that would be impossible in the co-presence performances. This would mean dealing with multiple video streams, which demands a larger bandwidth for connections. Reducing the demand in terms of bandwidth is nonetheless desirable in order to improve the spread of our tools. We intend to investigate on strategies to decrease the need of bandwidth.
+
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[t]{.46\columnwidth}
+		\centering        
+		\includegraphics[trim={0cm 0cm 0cm 0cm},clip,width=\textwidth]{img/webcam}
+		\caption{Normal view}
+		\label{subfig:webcam}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[t]{.46\columnwidth}
+		\centering        
+		\includegraphics[trim={0cm 0cm 0cm 0cm},clip,width=\textwidth]{img/blob}
+		\caption{BLOB view}
+		\label{subfig:blob}
+	\end{subfigure}
+	\quad 
+	\caption{Comparison between normal and BLOB view of a musician during a NMP.}\label{fig:wb}
+	%	\vspace{-1em}
+\end{figure}  
+
+
+Both LOLA and Ultragrid implement several coding algorithm to reduce the bandwidth, while slightly increasing the processing time for coding/decoding the video streams \cite{drioli2013networked,holub2006high}. A higher saving would be to detect and transmits only the silhouette of the musicians as a binary large object (BLOB) \cite{camurri2010visual}. In Figure \ref{fig:wb} we show a comparison between a normal take of a musician (Fig. \ref{subfig:webcam}) and a BLOB view (Fig. \ref{subfig:blob}).
+Being a binary image, the BLOB view is extremely lighter, while keeping most of the information on the motion. As future directions, we intend to investigate whether the BLOB or other motion-related representations can effectively convey the information needed by musicians for rehearsing together. 
 
 
 \subsection{Mono vs Stereo vs 3D Audio}
+Monophonic audio acquisition and rendering is commonly used in NMPs \cite{CIM2018}. Some studies employ headphones to avoid audio loop \cite{RottondiFeature}, which is however not natural for most musicians; others 
 
 \subsection{Environment: matching acoustics}
 
