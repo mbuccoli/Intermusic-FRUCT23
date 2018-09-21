@@ -28,7 +28,7 @@ In order to analyze the performance, it is crucial to run a \textbf{data recordi
 In our experiments we consider two types of performances: \textit{performed piece} or \textit{taught lesson}. The performance is the entity at the highest hierarchical level and it is composed of the subjects, the environments and the mediums. 
 Main properties of the performance are date and time, location(s), types of performance, such as is better detailed in the subjects' \textit{part} property, metadata (e.g., composer of the piece, tempo, meter, key signature, score, duration, etc.) and composition  description in form of symbolic representation (MIDI or musicXML) \cite{MIDItoolbox}.
 
-Some properties of the performance depend on the nature of its sub-entities. For example, if the subjects are two musicians, the performance can be a \textit{rehearsal} or a \textit{concert}, while if one of the subject is a teacher, the performance is defined as a \textit{lesson}. As discussed above, the property of performance also depends on the type of medium (physical or networked) \textbf{AD ESEMPIO ?????}.   
+Some properties of the performance depend on the nature of its sub-entities. For example, if the subjects are two musicians, the performance can be a \textit{rehearsal} or a \textit{concert}, while if one of the subject is a teacher, the performance is defined as a \textit{lesson}. As discussed above, the property of performance also depends on the type of medium: we have a networked or mixed performance if we have at least one networked medium.   
 
 \subsection{Subjects}
 Subjects are involved in the performance with different possible roles, such as musicians, students, teachers or conductors. Subjects are identified with their name, age, experience, musical background, that evolve over time and so must be referred to the day of the performance. Other properties inherently related to a subject is the assigned part -what they are performing- and the used instrument. These two properties can be also described by means of a content-based analysis of their musicological (e.g., rhythmic complexity) or timbral (e.g. attack time) properties, respectively \cite{RottondiFeature}.
@@ -36,15 +36,35 @@ Doing this, it is possible to analyze how such properties as aspects that may af
 
 
 \subsection{Environment}
-We refer to the spatial and acoustic properties of both the physical place where a subject performs and the perception of it by the other subjects as physical and virtual environment, respectively. The properties of the virtual environment depend on (and, therefore, include) the location and specifics of the audio/video acquisition and rendering devices, as well as the possible processing applied to the audio or video signals. For example, using an array of microphones we can %acquire a planar sound field of the environment and render it using an array of speakers using techniques for spatial audio [CIT]. 
-analyze the acoustic scene~\cite{Markovic2013} and render it using arrays of speakers through spatial audio techniques~\cite{bianchi2016}.
+We refer to the spatial and acoustic properties of both the physical place where a subject performs and the perception of it by the other subjects as physical and virtual environment, respectively. The properties of the virtual environment depend on the location and specifics of the audio/video capture and rendering devices, such as the microphone and speakers connected to the NMP equipment. For example, using an array of microphones we can capture the acoustic scene~\cite{Markovic2013} and render it using arrays of speakers through spatial audio techniques~\cite{bianchi2016}.
+
+Properties of the environment are also the possible processing applied to the audio or video signals. For example, by applying a reverb to the incoming audio signal, a subject will have a different perception of the virtual enviornment.
 
 We also collect the information about the interaction of the subjects with the environment, such as the position of the musicians in the room, the details of the audio/video acquisition (e.g., microphone on the instrument vs. fixed position microphone) and the relative position of musician and devices. 
 
 \subsection{Medium}
 The medium refers to the connection between the environments and, hence, the subjects. In case of a networked performance, the medium collects the information on the employed software for NMP and its settings, the network architecture and specifics, like bandwidth, latency. In case of a performance in the same room, like a traditional lesson, we collect information as the distance between the subjects, which measures the acoustic latency between them, and describe possible visual / acoustic occlusion that may be placed between the musicians. 
 
-\subsection{Acquisition}
-In order to observe the experiment and draw meaningful conclusions, we need to acquire the outcome that are interesting for our analysis. For the acquisition stage, we consider multimodal signals and their processing byproduct as well as questionnaire filled by the subjects. In the former case we can extract objective metrics of the performance, while in the latter we consider subjective results; both are important to assess the outcome of the experiment. 
+
+\begin{table}
+	\centering
+	\caption{Details of the experiment in co-presence}
+	\begin{tabular}{p{1.5cm}p{6cm}}
+		\hline
+		\textbf{Entity} & \textbf{Properties} \\
+		\hline
+		\textbf{Performance} & Co-presence performance. \newline Parts arranged from Bartok pieces as described in [cit]. \\
+		\textbf{Subjects} & Two brothers, violin and cello players. \newline Violin player: male, 25 years, 17 years musical experience; 	\newline Cello player: male, 19 years, 10 years  musical experience \\
+		\textbf{Environment} & Recording and mastering studio in the Conservatory of Milan; acoustically equipped with bass traps. \newline Musicians sit side by side, with peripherical vision.\\
+		\textbf{Medium} & Condition 1: Air propagation. \newline Condition 2: Visual occlusion applied by means of a a screen with progressive layers of canvas applied to decrease transparency and visibility. \\
+		\textbf{Data} \newline \textbf{recording}  & Interview to the participants and free comments.\\
+		\hline
+	\end{tabular}
+	\label{tab:exp1}
+\end{table}
+
+
+\subsection{Data recording}
+In order to observe the experiment and draw meaningful conclusions, we need to record the properties of the performance that are interesting for our analysis. For the data recording stage, we consider multimodal signals and their processing byproduct as well as questionnaire filled by the subjects. In the former case, we can extract objective metrics of the performance, while in the latter we consider subjective results; both are important to assess the outcome of the experiment. 
 
 With regard to the multimodal signals, the audio recording of the performance, from the two environments, are clearly useful to assess the quality of the performance or possible modifications in the timbral or rhythmic properties. Beyond that, video recordings are also useful to annotate saccadic movement during the interaction between the subjects \cite{vandemoortele2018gazing}, and we aim to capture biometric signals to objectively estimate the subjective distress of the performers \cite{Yoshie2009}. 
