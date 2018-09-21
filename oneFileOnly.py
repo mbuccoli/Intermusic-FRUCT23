@@ -48,7 +48,7 @@ def in_out(IN_FILE=None, OUT_FILE=None, content=None):
     
 if __name__=='__main__':
     IN_FILE='main.tex'
-    OUT_FILE='OneTexFile.tex'
+    OUT_FILE='IntermusicFRUCT.tex'
     content=in_out(IN_FILE=IN_FILE)
     '''
     the real algorith, which is basically a while with a replace:
