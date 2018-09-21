@@ -118,8 +118,15 @@ In the networked experiment we did not take the influence of room acoustics for 
 
 In real-case scenarios, it is likely that musicians are going to perform over network from two acoustically-different environments. In this case, they would listen to their own sound colored by their environment and receive their partner audio signal from a different acoustic, creating a misalignment between the two environments.
 
-We want to investigate the effect of environment acoustic by testing different combinations of real rooms' acoustics and synthetically-processed acoustics. This will help us understanding if musicians require techniques to address the issue of different acoustic environments for having a realistic performance. These techniques may involve to first blindly assess the acoustic conditions of the two environments and then de-convolve the partner's audio stream.
+We want to investigate the effect of environment acoustic by testing different combinations of real rooms' acoustics and synthetically-processed acoustics. This will help us understanding if musicians require techniques to address the issue of different acoustic environments for having a realistic performance. These techniques may involve to first blindly assess the acoustic conditions of the two environments and then de-convolve the partner's audio stream [CIT].
+
 
 
 \subsection{Measure for latency compensation and virtual conductor}
+One of the first factor investigated in the NMP literature was the influence of network latency in the quality \cite{RottondiOverview,drioli2013networked,CIM2018}. As discussed, a certain amount of latency is likely to be present for NMPs using general purpose hardware and connections.
 
+For this reason, researchers have been developing strategies to cope with the latency. For example, the laid-back approach  involves for a musician to play slightly behind the beat, and the delayed feedback approach which involve to equip one of the musician with a delayed feedback of their own sound in order to synchronize it with their partners sound \cite{Carot07networkmusic}. The presence of a conductor has also been shown to increase the tolerance to delay, thanks to the common cue provided to the performers \cite{Olmos2009}.
+
+In order to merge these strategies in our platform, we aim at developing algorithms that compensate for the delay. We plan to use a beat tracker to dynamically track the rhythm of the performance of the musicians, as in \cite{Goto2010}, as if there was a conductor, and use it to provide in advance to musician a click track. This will allow musicians to follow a virtual conductor, similarly to what proposed in \cite{conductor2008}.
+ 
+Lastly, the next frontier of 5G is promising extremely low-latency connections, down to few milliseconds, that may enable NMPs applications even for generic users \cite{uk5G}.
